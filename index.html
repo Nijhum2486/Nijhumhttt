@@ -1,0 +1,17 @@
+function main (input) {
+    let numbers = input.split(' ')
+    let a =parseInt(numbers[0]);
+    let b =parseInt(numbers[1]);
+    let result = a/b
+    let find =  Math.trunc(result)
+    console.log(find)    
+}
+
+let input = "";
+process.stdin.on('data', (chunk) => {
+    input += chunk;
+});
+
+process.stdin.on('end', () => {
+    main(input.trim());
+});
